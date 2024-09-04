@@ -98,7 +98,7 @@ Some values are also provided by ansible
 
 **Sample Ansible playbook**
 
-**playbook.yml or playbook.yaml**
+*playbook.yml or playbook.yaml*
 ```
 - name: Some Playbook (Play1)
   hosts: all
@@ -123,4 +123,8 @@ hosts is must to have keyword
 either task or role is a must to have role.
 
 **Ansible pull** 
-ansible-pull -i localhost, -U URL file.yml
+
+*ansible-pull -i localhost, -U URL file.yml*
+```
+ansible-pull -i localhost, -U https://github.com/Satishsatti3789/ansible.git frontend.yml
+```
