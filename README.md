@@ -121,3 +121,6 @@ name keyword on play level is optional and itsgood to have.
 hosts is must to have keyword
 
 either task or role is a must to have role.
+
+**Ansible pull** 
+ansible-pull -i localhost, -U URL file.yml
