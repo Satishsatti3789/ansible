@@ -12,7 +12,7 @@
         name: mongodb-org
         state: latest
 
-    - name: Replace 'oldword' with 'newword' in a file
+    - name: Change the IP
       ansible.builtin.replace:
         path: /etc/mongod.conf
         regexp: '127.0.0.1'
