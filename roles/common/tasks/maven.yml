@@ -1,7 +1,7 @@
-#- name: Install Maven
-#  ansible.builtin.yum:
-#    name: maven
-#    state: installed
+- name: Install Maven
+  ansible.builtin.yum:
+    name: maven
+    state: installed
 
 - name: Install Java
   ansible.builtin.yum:
@@ -13,10 +13,10 @@
     file: app_presetup.yml
 
 # this step goes with CI
-#- name: Download Maven Dependencies
-#  ansible.builtin.shell: mvn clean package ; mv target/{{ component }}-1.0.jar {{ component }}.jar
-#  args:
-#    chdir: /app
+- name: Download Maven Dependencies
+  ansible.builtin.shell: mvn clean package ; mv target/{{ component }}-1.0.jar {{ component }}.jar
+  args:
+    chdir: /app
 
 - name: MySQL Schema Setup
   ansible.builtin.import_tasks:
